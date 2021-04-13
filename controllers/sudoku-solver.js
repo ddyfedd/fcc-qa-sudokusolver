@@ -67,7 +67,7 @@ class SudokuSolver {
     
     for (let i = 0; i < 3; i++)
       for (let j = 0; j < 3; j++)
-        if (grid[i + startRow][j + startCol] == num) return false;
+        if (grid[i + startRow][j + startCol] == value) return false;
 
     return true;
   }
