@@ -157,6 +157,13 @@ class SudokuSolver {
   }
 
   solve(puzzleString) {
+    if (puzzleString.length != 81) {
+      return false;
+    }
+    if (/[^0-9.]/g.test(puzzleString)) {
+      return false;
+    }
+
     let grid = this.transform(puzzleString);
     let solved = this.solveSudoku(grid, 0, 0);
 

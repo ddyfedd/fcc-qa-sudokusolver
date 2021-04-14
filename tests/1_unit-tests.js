@@ -15,7 +15,7 @@ suite('UnitTests', () => {
     });
 
     test('Logic handles a puzzle string with invalid characters (not 1-9 or .)', (done) => {
-      let invalidPuzzle = '1.5..2.84..63.12.7.2..5.g...9..1....8.2.3674.3.7.2..9.47...8..1..16....926914.37.';
+      let invalidPuzzle = '1.5..2.84..63.12.7.2..5g....9..1....8.2.3674.3.7.2..9.47...8..1..16....926914.37.';
       assert.equal(solver.solve(invalidPuzzle), false);
       done();
     });
