@@ -56,14 +56,14 @@ class SudokuSolver {
     return true;
   }
 
-  checkRegionPlacement(puzzleString, row, col, value) {
+  checkRegionPlacement(puzzleString, row, column, value) {
     let grid = this.transform(puzzleString);
     row = this.letterToNumber(row);
-    if (grid[row - 1][col - 1] !== 0) {
+    if (grid[row - 1][column - 1] !== 0) {
       return false;
     }
-    let startRow = row - row % 3;
-    let startCol = col - col % 3;
+    let startRow = row - (row % 3);
+    let startCol = column - (column % 3);
     
     for (let i = 0; i < 3; i++)
       for (let j = 0; j < 3; j++)
